@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="CATEGORIES">
+        <menu>
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/music"
+            android:title="Music" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/artistes"
+            android:title="Artist" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/albulm"
+            android:title="Albulm" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/playlist"
+            android:title="Playlist" />
+        </menu>
+        </item>
+
+
+
+    <item android:title="SERVICE">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/star"
+                android:title="Favorites" />
+        </menu>
+    </item>
+
+</menu>
+
