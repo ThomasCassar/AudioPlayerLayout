@@ -5,19 +5,19 @@
     <item android:title="CATEGORIES">
         <menu>
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/music"
             android:icon="@drawable/music"
             android:title="Music" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/artistes"
             android:icon="@drawable/artistes"
             android:title="Artist" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/album"
             android:icon="@drawable/albulm"
-            android:title="Albulm" />
+            android:title="Album" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/playlist"
             android:icon="@drawable/playlist"
             android:title="Playlist" />
         </menu>
@@ -32,7 +32,7 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/fav"
                 android:icon="@drawable/star"
                 android:title="Favorites" />
         </menu>

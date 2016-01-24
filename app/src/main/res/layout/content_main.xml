@@ -13,8 +13,7 @@
     tools:showIn="@layout/app_bar_main"
     >
 
-    <include layout="@layout/song_list_layout"
-        android:layout_height="wrap_content" />
+
 
 
 
