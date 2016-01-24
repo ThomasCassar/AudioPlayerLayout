@@ -13,14 +13,9 @@
     tools:showIn="@layout/app_bar_main"
     >
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="425dp"
-        android:id="@+id/tweetsListView"
-        android:layout_gravity="center_horizontal"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"></ListView>
+    <include layout="@layout/song_list_layout"
+        android:layout_height="wrap_content" />
+
 
 
 

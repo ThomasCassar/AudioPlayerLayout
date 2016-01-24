@@ -3,6 +3,8 @@ package com.example.cassar.audio;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.DragEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -31,6 +33,17 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+
+
+        // A utiliser si l'on veut faire "la bulle" et encore...
+
+//       fab.setOnTouchListener(new View.OnTouchListener() {
+//           @Override
+//           public boolean onTouch(View v, MotionEvent event) {
+//               setContentView(R.layout.content_main);
+//               return false;
+//           }
+//       });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
