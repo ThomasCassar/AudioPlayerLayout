@@ -12,7 +12,7 @@
         android:orderInCategory="100"
         android:icon="@drawable/shuffle"
         android:title="Shuffle"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/search"
@@ -27,4 +27,3 @@
 
 </menu>
 
-    <!--android:actionLayout="@layout/app_bar_main"-->

@@ -8,7 +8,6 @@
     tools:context="com.example.cassar.audio.MainActivity">
 
 
-
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,10 +15,10 @@
 
         <!-- à utiliser si on ne prend pas le home made -->
         <!--<SearchView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:id="@+id/search_text_field"-->
-            <!--android:visibility="visible">-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/search_text_field"-->
+        <!--android:visibility="visible">-->
         <!--</SearchView>-->
 
         <android.support.v7.widget.Toolbar
@@ -27,41 +26,47 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
 
-
-         <!--INUTILE PARCE QUE SEARCH PUTAIN DE VIEW-->
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/myEditText"
-            android:textColor="#ffff"
-            android:hint="Research: "
-            android:visibility="gone"/>
-        <Button
+        <!--INUTILE PARCE QUE SEARCH PUTAIN DE VIEW-->
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/okResearch"
-            android:layout_gravity="right"
-            android:text="Let's start!"
-            android:visibility="gone" />
+            android:layout_height="wrap_content">
 
+            <EditText
+                android:id="@+id/myEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Research: "
+                android:textColor="#ffff"
+                android:autoText="true"
+                android:visibility="gone"
+                android:layout_toLeftOf="@+id/okResearch"
+                android:layout_toStartOf="@+id/okResearch" />
+
+            <Button
+                android:id="@+id/okResearch"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="GO!"
+                android:visibility="gone" />
+        </RelativeLayout>
 
 
     </android.support.design.widget.AppBarLayout>
 
 
-
-
     <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/fab"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="bottom|end"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--android:src="@drawable/play" />-->
-
+    <!--android:id="@+id/fab"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|end"-->
+    <!--android:layout_margin="@dimen/fab_margin"-->
+    <!--android:src="@drawable/play" />-->
 
 
 </android.support.design.widget.CoordinatorLayout>

@@ -21,7 +21,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -113,16 +115,18 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.search) {
             //Soit ça soit home made
-//            findViewById(R.id.search_text_field).setVisibility(View.VISIBLE);
 
-            Button button = (Button) findViewById(R.id.okResearch);
             findViewById(R.id.myEditText).setVisibility(View.VISIBLE);
             findViewById(R.id.okResearch).setVisibility(View.VISIBLE);
+
+            Button button = (Button) findViewById(R.id.okResearch);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     findViewById(R.id.myEditText).setVisibility(View.GONE);
                     findViewById(R.id.okResearch).setVisibility(View.GONE);
+                    EditText editText = (EditText) findViewById(R.id.myEditText);
+                    editText.setText("");
                 }
             });
             return true;
