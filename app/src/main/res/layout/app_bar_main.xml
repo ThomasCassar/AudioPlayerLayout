@@ -14,12 +14,38 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
+        <!-- à utiliser si on ne prend pas le home made -->
+        <!--<SearchView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/search_text_field"-->
+            <!--android:visibility="visible">-->
+        <!--</SearchView>-->
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+
+
+         <!--INUTILE PARCE QUE SEARCH PUTAIN DE VIEW-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/myEditText"
+            android:textColor="#ffff"
+            android:hint="Research: "
+            android:visibility="gone"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/okResearch"
+            android:layout_gravity="right"
+            android:text="Let's start!"
+            android:visibility="gone" />
 
 
 

@@ -1,5 +1,6 @@
 package com.example.cassar.audio;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -7,6 +8,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.MenuItemCompat;
+import android.text.Layout;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,6 +21,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,6 +32,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.accueil);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -81,6 +86,14 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    private boolean isChecked = false;
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -94,16 +107,30 @@ public class MainActivity extends AppCompatActivity
         }
 
         if (id == R.id.shuffle) {
-            setContentView(R.layout.content_main);
             return true;
         }
 
+
         if (id == R.id.search) {
+            //Soit ça soit home made
+//            findViewById(R.id.search_text_field).setVisibility(View.VISIBLE);
+
+            Button button = (Button) findViewById(R.id.okResearch);
+            findViewById(R.id.myEditText).setVisibility(View.VISIBLE);
+            findViewById(R.id.okResearch).setVisibility(View.VISIBLE);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    findViewById(R.id.myEditText).setVisibility(View.GONE);
+                    findViewById(R.id.okResearch).setVisibility(View.GONE);
+                }
+            });
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

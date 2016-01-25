@@ -19,8 +19,12 @@
         android:orderInCategory="100"
         android:icon="@drawable/research"
         android:title="Search"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom"
+         />
+
 
 
 
 </menu>
+
+    <!--android:actionLayout="@layout/app_bar_main"-->
